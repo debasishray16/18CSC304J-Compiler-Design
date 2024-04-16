@@ -1,4 +1,35 @@
-# WinFlexBison - Flex and Bison for Microsoft Windows
+# Steps
+
+```bash
+win_flex test.l
+win_bison test.y
+```
+
+```bash
+win_flex -d test.l
+win_bison -d test.y
+```
+
+```bash
+gcc lex.yy.c test.tab.c -o scanner
+```
+
+```bash
+scanner.exe
+```
+
+## Output
+
+```bash
+--(end of buffer or a NUL)
+Hello, My name is Debasish Ray
+--accepting rule at line 14 ("Hello")
+Your entered a string - Hello--accepting rule at line 17 (",")
+Other inputSyntax Error on line syntax error
+```
+
+
+### WinFlexBison - Flex and Bison for Microsoft Windows
 
 WinFlexBison is a Windows port of [Flex (the fast lexical analyser)](https://github.com/westes/flex/) and [GNU Bison (parser generator)](https://www.gnu.org/software/bison/).
 Both win_flex and win_bison are based on upstream sources but depend on system libraries only.
@@ -7,13 +38,13 @@ Both win_flex and win_bison are based on upstream sources but depend on system l
 * 2.4.x versions include GNU Bison version 2.7
 * 2.5.x versions include GNU Bison version 3.x.x
 
-## License
+### License
 Flex uses a [BSD license](flex/src/COPYING), GNU Bison is [licensed under the GNU General Public License (GPLv3+)](bison/src/COPYING).  
 All build scripts in WinFlexBison are distributed under GPLv3+. See [COPYING](COPYING) for details.
 
 All documentation, especially those under custom_build_rules/doc, is distributed under the GNU Free Documentation License (FDL 1.3+).
 
-## Build status
+### Build status
 Bison 3.x (master) [![Build status](https://ci.appveyor.com/api/projects/status/58lcjnr0mb9uc8c8/branch/master?svg=true)](https://ci.appveyor.com/project/lexxmark/winflexbison/branch/master) and, for compatibility reasons, Bison 2.7 (bison2.7) [![Build status](https://ci.appveyor.com/api/projects/status/58lcjnr0mb9uc8c8/branch/bison2.7?svg=true)](https://ci.appveyor.com/project/lexxmark/winflexbison/branch/bison2.7)
 
 ## Downloads
